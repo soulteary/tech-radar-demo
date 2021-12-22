@@ -1,0 +1,10 @@
+version: "3.6"
+
+services:
+
+  nginx:
+    image: nginx:1.21.4-alpine
+    volumes:
+      - ./static:/usr/share/nginx/html
+    ports:
+      - 8090:80

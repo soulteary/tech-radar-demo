@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Radar Demo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            border: 0;
+        }
+
+        iframe {
+            float: left;
+            transition: opacity 0.5s ease-in;
+            opacity: 1;
+        }
+
+        iframe.darken {
+            opacity: 0.5;
+        }
+
+        body {
+            background: #282828;
+        }
+
+        h1 {
+            margin: 20px;
+            font-size: 60px;
+            color: #fefefe;
+            text-align: center;
+            border-bottom: 5px dashed #fefefe;
+        }
+
+        #main-container {
+            background: #282828;
+            min-width: 1200px;
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        #sidebar-container {
+            float: right;
+            top: 50px;
+            right: 5px;
+            color: #fff;
+        }
+
+        #data-export {
+            width: 100%;
+        }
+
+        #operator a {
+            color: silver
+        }
+
+        #sidebar-container li {
+            margin-bottom: 5px;
+        }
+
+        #export-data-container {
+            margin-top: 10px;
+            width: 140px;
+            height: 70px;
+            display: block;
+        }
+
+        #tech-points {
+            width: 300px;
+            border-left: 5px dashed;
+            text-indent: 10px;
+        }
+        #tech-points h3{
+            font-size: 24px;
+            margin: 10px 0;
+        }
+        #tech-points ul{
+            list-style: none;
+            text-indent: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Tech Radar</h1>
+
+    <div id="main-container">
+
+        <div id="sidebar-container">
+            <div id="tech-points"></div>
+            <div id="operator">
+                <a href="javascript:void(0);" data-cmd="save">[导出数据]</a>
+                <a href="javascript:void(0);" data-cmd="load">[加载数据]</a>
+            </div>
+            <div id="export-data-container">
+                <textarea id="data-export">W1tbNTAsMTAsMiwwXSxbMjUsMTMsMywwXSxbNTYsMjAsMCwwXV0sW1sxNSwxMCwxLDBdLFsyNSwzMywzLDBdLFszNSwyMCwwLDBdLFs0NSwzMCwyLDBdXSxbWzgsOSwwLDBdLFsxMSwxOSwwLDBdLFsyMiwxMiwwLDBdLFsyMCwzNSwwLDBdXSxbWzExLDEwLDIsMF0sWzIzLDEyLDAsMF0sWzE0LDIxLDAsMF0sWzQwLDEwLDAsMF0sWzM2LDI3LDIsMF0sWzMwLDM5LDEsMF0sWzQ3LDI4LDIsMF0sWzEwLDQxLDAsMF0sWzY4LDE2LDIsMF0sWzcyLDMwLDIsMF0sWzQ5LDQ5LDIsMF0sWzYwLDUwLDMsMF0sWzMzLDY0LDAsMF0sWzI5LDc2LDAsMF0sWzE4LDY4LDIsMF1dXQ==</textarea>
+            </div>
+        </div>
+
+    </div>
+
+
+    
+    <script src="/assets/libs/zepto.min.js"></script>
+    <script src="/assets/libs/echarts.min.js"></script>
+    <script id="radar-bootstrap" src="/assets/scripts/loader.min.js" data-container="main-container"></script>
+</body>
+</html>
